@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+
+    <style>
+        /* transform 속성
+        생성되어있는 객체를 회전히고 스케일을 조절하거나
+        위치를 변향시키는 css
+        가본값으로 활용할 수 있으며, 이벤트적인 요소에서도 활용 가능하다. 
+        
+        rotate 객체 회전
+        객체를 중심으로 작성된 수치 만큼 회전
+
+        rotate :  x축과 y 축에 대한 그룹속성
+        rotate3d :  x축과 y축 z축에 대한 그룹속성
+
+        위치를 가지고 있는 속성에는 기본적으로 x축과y축이 따로 설정되어 있다.
+        개별적으로 사용하거나 그룹속성에서 함께 사용할 수 있다.
+        
+        
+        ***벤더 프리픽스(Vendor Prefix)***
+        세계적으로 가장 많이 사용되는 웹 브라우저에는 익스플로러, 크롬, 파이어폭스, 사파리, 오페라 등이 있습니다.
+
+        벤더 프리픽스(vendor prefix)란 이러한 주요 웹 브라우저 공급자가 새로운 실험적인 기능을 제공할 때 이전 버전의 웹 브라우저에 그 사실을 알려주기 위해 사용하는 접두사(prefix)를 의미합니다.
+
+        즉 아직 CSS 권고안에 포함되지 못한 기능이나, CSS 권고안에는 포함되어 있지만 아직 완벽하게 제정된 상태가 아닌 기능을 사용하고자 할 때 벤더 프리픽스를 사용하게 됩니다.
+
+        그렇게 하면 해당 기능이 포함되어 있지 않은 이전 버전의 웹 브라우저에서도 그 기능을 사용할 수 있게 됩니다.
+        
+        작성 순서는 벤더 프리픽스를 먼저 선언후 css는 아래에 작성
+             -webkit-transform: rotateY(45deg); 사파리
+             -moz-transform: rotateY(45deg);파이어폭스
+             -o-transform: rotateY(45deg); 오페라
+             -ms-transform: rotateY(45deg); 익스,엣지
+
+        2.scale :갹체를 줄이고 늘린다.
+        기본값은 1(100%) 가운데 기준(기준점을 바꿔서 사용할수도 있다)
+
+        3.  transform-origin : 객체의 기준점을 바꾸는 css
+        rotate나 scale 같은 경유 객체의 중심을 기준으로 하기때문에 
+        기준점을 바꾸는 경우가 생긴다.
+        특정 좌표값(top, bottom, center, left, right)이 아닌 px이나 %로 설정 할 수도 있다.
+        기본값은 50%,50%이며 첫번째 값은 left 두번째 값은 top이다.
+
+        4.skew : 객체비틀기
+        z축은 존재 x , 해당 방향으로 각도만큼 비튼다.
+
+        5. translate : 객체이동 css
+        %나 px단위로 이동하며 양수는 left 음수는 right로 이동한다.
+        z축에서는 %를 사용할 수 없다.
+
+                
+        */
+
+        div.box{
+            width: 300px;
+            height: 300px;
+            background-color: coral;
+            transform: translateX(100%); /*자신기준으로 움직인다*/
+        }
+
+        div.box2{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            position: relative; /*부모기준으로 움직인다*/
+            left: 50px;
+        }
+        div.position,
+        div.translate{
+            width: 1000px;
+            padding: 25px;
+            background-color: gray;
+            position: relative;
+            margin: 20px 0px;
+        }
+
+        div.position div,
+        div.translate div{
+            background-color: coral;
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+        }
+
+        div.position div:nth-child(3){
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: pink;
+        }
+        div.translate div:nth-child(3){
+            transform: translate(30px, 30px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">box</div>
+    <div class="box2">box2</div>
+    <div class="position">
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+        <div>box6</div>
+    </div>
+
+    <div class="translate">
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+        <div>box6</div>
+    </div>
+
+</body>
+</html>

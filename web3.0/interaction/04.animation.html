@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+
+    <style>
+        div.item{
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            animation-name: boxAni;
+            animation-duration: 5000ms;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+            /* animation-name,animation-duration -필수 속성 
+            animation-iteration-count = 반복
+            무한반복 = infinite*/
+        }
+
+        .box01{
+            background-color: coral;
+        }
+        .box02{
+            background-color: pink;
+        }
+        .box03{
+            background-color: purple;
+        }
+        .box04{
+            background-color: lime;
+        }
+        .box05{
+            background-color: lightsalmon;
+        }
+        .box06{
+            background-color: rgb(208, 189, 252);
+        }
+
+        @keyframes boxAni{
+  
+
+            50%{
+                background-color: red;
+                width: 200px;
+            }
+            100%{
+                background-color: yellow;
+                width: 100px;
+            }
+        }
+
+        /* 애니메이션은 html요소에 적용되는 css를 다른 csss로 제어해서
+        부드럽게 전환되는 효괴를 주며, transition과 유사한 환경을 가지고 있지만
+        세부적인 컨트롤, 단독적으로 실행 할 수 있는 특징을가지고 있다.(상위개념)
+
+        이벤트에 적용-transition (단순한 속성 변화 목적)
+        페이지 로딩시 바로실행 - animation (스토리 내에서 세부적인 움직임) */
+    </style>
+</head>
+<body>
+    <div class="item box01">box01</div>
+    <div class="item box02">box02</div>
+    <div class="item box03">box03</div>
+    <div class="item box04">box04</div>
+    <div class="item box05">box05</div>
+    <div class="item box06">box06</div>
+</body>
+</html>

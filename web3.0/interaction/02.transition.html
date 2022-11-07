@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        /* 
+        transition 효과
+        
+        특정 행동(이벤트)을 취했을때 변환되는 요소가 전환되느 ㄴ시각적인 효과를 
+        주는 속성
+        
+        -duration 전환되는 시간
+        단위는 s,ms 1초 =1s, 1s = 1000ms
+
+        -timing-funtion : 전환시간 함수
+            linear : 속도 유지
+            ease : 느리게 - 빠르게 - 느리게
+            ease-in : 느리게 - 가속하면서 종료(기본값)
+            ease-out : 빠르게 시작해서 감속하면서 종료
+            ease-in-out :  느리게 - 빠르개 -느리게 (ease보다 변화속도가 빠름)
+
+            transition 그룹 속성
+            transition : property(생략가능) duration(생략 불가능) delay(생략가능), timing(생략가능)
+
+            다른 속성은 순서가 바뀌어도 상관 없지만 duration과 delay는 순서가 바뀌면 안된다.
+            값이 하나면  duration 두개일때는 앞이 duration 
+       
+        */
+
+        div.box{
+            width: 500px;
+            height: 500px;
+            background-color: coral;
+            /* transition-property: all;
+            transition-duration: 500ms;/*0.5s
+            transition-delay: 100ms;
+            transition-timing-function: ease; */
+            transform-origin: left top;
+            transition: 1500ms;
+            
+        }
+
+        div.box:hover{
+            background-color: pink;
+            transform: scaleX(1.5);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        box
+    </div>
+</body>
+</html>
