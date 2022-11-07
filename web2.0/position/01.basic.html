@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션 속성</title>
+    <style>
+
+        body{
+            height: 2000px;
+        }
+        
+        div.box{
+            width: 200px;
+            height: 200px;
+            background-color: coral;
+            left: 500px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 999;
+        }
+
+        div.box1{
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+
+        div.box2{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        div.box3{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        div.child{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+
+        }
+
+        div.fixBox{
+            width: 100%;
+            height: 100px;
+            background-color: gray;
+            
+        }
+        
+        /* 
+        relative : 상대적인 위치값
+        위치값을 잡게 되는 기준이 현재 자신의 위치를 기분으로 한다.
+        기존 컨텐츠들의 플로우를 계속 유지하는게 특징이다.
+
+        absolute : 절대적인 위치값
+        모든 컨텐츠들의 플로우 관계를 무시하며, 기준이 '부모요소'의 위치값을 
+        기준으로 하게 된다.
+
+        ***(부모요소에 포지션이 적용되어 있어야 부모를 따라가고 포지션이 없으면 상위로 올라가며 찾는다. 최종 - body)***
+
+        static : 초기값
+        기존의 포지션 속성을 해제할 때 사용(스크립트)
+
+        fixed : 화면에 고정된다.(boby의 위치값을 기준)
+
+        *** z-index
+        position, flex, grid가 적용된 요소끼리 나중에 작성된 요소가 제일 위에 올라가게 되므로 z-index를
+        순번을 정하게 되며, 기본값은 0이고 값이 높을수로 앞에 출력된다.
+
+        */
+    </style>
+</head>
+<body>
+    <div class="box">box</div>
+    <div class="box1">box1</div>
+    <div class="box2">box2
+        <div class="child">
+            child
+        </div>
+    </div>
+    
+    <div class="box3">box3</div>
+    <div class="fixBox">box3</div>
+</body>
+</html>
