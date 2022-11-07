@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01-2</title>
+
+    <style>
+
+        body,html,div,span,a{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        div.container{
+            width: 470px;
+            padding: 24px;
+            border: solid 1px gray;
+            height: 244px;
+            background: url("woman.jpg") no-repeat 24px 24px;
+            margin: 100px auto;
+            padding-left: 250px;
+
+        }
+
+        div.textContainer span,
+        div.textContainer a{
+            display: block;
+        }
+
+        span.subTitle{
+            font-size: 12px;
+            letter-spacing: 4px;/*자간*/
+            margin-bottom: 12px;
+
+            /* hmtl 기본 폰트 사이즈는 16px 
+            촤소사이즈 10px이며 최소 12px사용*/
+        }
+       
+        span.title{
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            font-family: Verdana;
+        }
+
+        span.text{
+            font-size: 14px;
+            color: gray;
+            margin-bottom: 24px;
+        }
+        
+        a{
+            text-decoration: none; /*a태그 밑줄속성 리셋*/
+            color: #333333;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+ 
+        <div class="textContainer">
+            <span class="subTitle">2016 LAFUMA CADALOGUE</span>
+            <span class="title">ATHLETIC + TRECKKING</span>
+            <span class="text">
+                도심속 가벼운 애슬레틱에서도, 자연과 함께 즐기는 트레킹에사도,
+                언제 어디서나 라푸마와 함께라면 당신의 모든 액비트한 순간들은 더욱 FRESH하게 변화한다.
+            </span>
+            <a href="../attribute/01.blank.html" title="상세페이지로 이동" target="">view More</a>
+        </div>
+    </div>
+
+</body>
+</html>

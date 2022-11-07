@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력태그</title>
+
+    <style>
+        textarea{
+            width: 700px;
+            height: 500px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    form 태그
+    사용자가 입력을 위한 다양한 방식의 입력 폼을 제공하는 태그
+    지정된서버에 입력된 값을 보내는 역할을 한다.
+    데이터를 전송하거나 받아와야하기 때문에
+    form태그로 감싸고 입력태그를 작성해야 한다 
+    form태그의 자식요소는 제한이 없다.
+
+    
+    form 태그에 들어가는 속성
+    -action 실행시킬 주소를 지정 
+    입력된 값을 서버 또는 프로그램의 주소르 지정한다.
+    이곳으로 데이터를 저ㄴ송하려면 브라우저가 전송위치를 알아야하기 때문에
+    필수적으로 들어가는 요소이다
+
+    -method 서버에 전송되는 정보를 보내는 타입
+    * get : 전송되는 데이터의 값들을 암호화하지 않는다
+    (암호화가 되지 않기때문에 보안에 취약하며, 한번에 전송되는 데이터의 양이 제한적이다.-쿼리문자열로 전송되는 타입이기때문)
+    * post : 전송되는 데이터의 값을 암호화해서 전송
+    데이터를 별도로 전송하는 방식이여서 브라우저에서 내역을 남기지 않는다.
+    보안성도 get에 비해서 월등히 높고 한번에 전송되는 양에도 제한이 없다.
+
+    -novalidate : html5 에서 새로생긴 속성중에 하나로 유효성을 체크하는 속성값이 있으면,
+    해당 기능을 무시하게 된다.
+
+    -name = id와 class 개념, 입력 태그에만 사용할 수 있으며,
+    css 를 주기위해서 생성되는것은 아니며, 스크립트나 서버내에서 정보의 값을 식별하기 위한 용도
+
+    -value
+    input요소의 type에 따라 용도가 달라진다.
+    -checkbox형태에서는 서버로 제출되는 값
+    -text, password,, hiddem에서는 초기값
+    -button타입, reset, submit 포함에서는 버튼 내부 텍스트
+    *** file type은 value가 적용되지 않는다.
+
+    form 태그안에 들어가는 태그들
+    1. fieldset = 입력요소들을 구분지을때 쓰는 그룹태그
+    간단한 구조나 그룹을 나늘 필요가 없는경우 생략하여도 무관하다.
+
+    2.legend 필드셋의 제목
+    fieldset이 들어갈 경우 legend를 무조건 추가!
+
+    input에 들어가는 속성
+    maxlength : 최대 글자수 설정
+    minlength : 최소 글자수 설정 (촤소글자수는 유효성을 체크한다.)
+    placeholder
+    size : 입력창의 길이 (기준 -> 글자수) 기본값은 20, 잘사용하지 않는다 -> 대신 width
+    required (단일속성) : input의 속성을 필수 입력요소로 변경
+    disabled (단일속성) : 입력하지 못하게 한다, 데이터 모두 전송되지않는다 벨류값도
+    readonly (단일속성) : 입력하지 못하게 한다, 안에있는 테이터는 전송된다.
+
+
+    *** check-checked, select-selected : 미리선택해줌, 사용자의 편의성 ***        
+
+    
+-->
+                                                 
+    <form action="" method="" novalidate>
+        <fieldset>
+            <legend>input에 들어가는 타입</legend>
+            <input type="text" maxlength="10" minlength="2" placeholder="아이디" size="10" readonly>
+            <input type="password" placeholder="비밀번호" required disabled >
+            <input type="button" value="버트으으은">
+            <input type="submit" value="확인">
+            <!-- 서버에 데이터를 전송하기 위한 버튼 (기능을 바꾸지 x)  -->
+            <input type="image" src="../example/woman.jpg">
+            <!-- 이미지를 넣을 수 있는 버튼 src속성으로 이미지를 연결한다 -->
+            <input type="reset">
+            <input type="color">
+            <!-- ie,사파리 미지원 --> 
+            <input type="date">
+            <!-- html5전용 ie미지원 -->
+            <input type="email">
+            <input type="file">
+            <input type="hidden">
+            <!-- 사용자가 집접적으로 사용하는 영역은 아니지만
+            보이지 않는 곳에서 데이터를 전송받거나 혹은 분류하기 위한 영역으로 사용하기
+            위해서 만들어 놓은 타입 -->
+            <input type="number">
+            <input type="radio">
+            <!-- 중복선택이 불가능한 체크박스 형태 -->                                  
+            <input type="checkbox">
+            <!-- 중복선택 가능 -->
+            <input type="radio" name="gender" value="male" checked>남성
+            <input type="radio" name="gender" value="female">여성
+            <!-- name을 넣어줘야 중복선택이 안됌 -->
+        </fieldset>
+        
+        <fieldset>
+            <legend>input외에 사용하는 입력태그</legend>
+            <select name="month">
+                <option value="jan">월</option>
+                <option value="feb">1</option>
+                <option value="mar">2</option>
+                <option value="apr">3</option>
+                <option value="...">4</option>
+                <option value="...">5</option>
+                <option value="...">6</option>
+                <option value="...">7</option>
+                <option value="...">8</option>
+                <option value="...">9</option>
+                <option value="...">10</option>
+                <option value="..." selected>11</option>
+                <option value="...">12</option>
+            </select>
+            <select name="telecomNum">
+                <option selected>010</option>
+                <option>011</option>
+                <option>019</option>
+                <option>016</option>
+            </select>
+
+            <textarea>
+                졸려!
+            </textarea>
+
+        </fieldset>
+    </form>
+</body>
+</html>

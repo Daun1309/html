@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+
+    <style>
+        /*
+        display 속성
+        객체들을 보여주는 방식에 대한 속성값
+
+        ***display속성으로 타입을 변경할수는 있지만 본질은 변하지 x
+        즉 span에 block속성을 주어도 div를 담는건 안된다.
+
+        inline 특징
+        width 와 height값을 받아오지 못함
+        margin은 top/bottom은 적용되지 못함(padding은 4방향 다 받아옴)
+
+        block 특징
+        가로 100%를 가본값으로 잡음(높이값은 컨텐츠의 높이만큼 설정)
+        영역에 대한 설정이나 여백에 대한 설정 모두을 받아옴
+
+        *** none은 화면상에서 출력을 하지 않는 속성이다
+        opacity는 투명도만 주기 때문에 영역에 대한 정보는 남아있지만 none은 영역까지 없애게 된다.
+        주로 스크립트에서 함께 사용하며 다시 나오게 하려면 block 속성을 주면 된다.
+
+        */
+        div.parent{
+            font-size: 0;
+        }
+
+        span.box{
+            width: 100px;
+            height: 50px;
+            background-color: coral;
+            margin: 50px;
+            padding: 50px;
+           
+        }
+
+        div.inline-item{
+            width: 200px;
+            height: 50px;
+            background-color: pink;
+            display: inline-block; 
+            /* ↑ 사용할때 부모의 폰트 사이즈를 리셋 시켜준다 (저절로 자간이 들어가기 때문에 여백이 보임)*/
+            font-size: 16px;
+
+        }
+
+        div.box02{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            display: none;
+        }
+
+        div.box03{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(41, 14, 18);
+            
+        }
+    </style>
+</head>
+
+<body>
+    <span class="box">span</span>
+
+    <div class="parent">
+        <div class="inline-item">item</div>
+        <div class="inline-item">item</div>
+        <div class="inline-item">item</div>
+        <div class="inline-item">item</div>
+    </div>  
+    
+    <div class="box02">box02</div>
+    <div class="box03">box03</div>
+</body>
+
+</html>

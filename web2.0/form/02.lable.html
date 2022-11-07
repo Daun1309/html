@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lable</title>
+</head>
+<body>
+    <!-- 
+    label요소
+
+    일반텍스트와 입력요소간의 연결고리를 두어 하나의 영역으로 인식하는 기법
+    웹표준과 접근성을 준수하기 위해서는 기본적으로 lable을 사용하여 작성해야 한다,
+
+    1.명시적 작성 방법 (권장)
+    label의 for속성과 input의 id를 서로 연결해서 서로 떨어져있어도 연결해주는 방식
+
+    2. 암시적 작성 방법 (구버전에서 잘 안돼는 경우가 있음)
+    label태그안에 input요소와 택스트를 함께 넣음으로써 id와 for를 넣지 않고도 
+    연결해주는 방식
+
+    -->
+
+    <form>
+        <input type="radio" name="gender" value="male" id="male">
+        <label for="male">남성</label>
+        
+        <label>
+            <input type="radio" name="gender" value="female">여성
+        </label>
+    </form>
+</body>
+</html>
