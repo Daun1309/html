@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /*
+    가상 선택자
+    -사용자의 행동에 영행을 받는 요소를 생성하거나(event)
+    -특정한 위치의 순번을 가진 선택자를 찾을 때(select)를 
+    통틀어서 가상 선택자라고 한다. 
+
+    이벤트요소
+
+    a태그에만 들어가는 이벤트 속성
+    :visites :방문했던 사이트에 대한 선택자
+    :link : 방문하지 않은 사이트에 대한 선택자.
+
+    모든 선택자
+    :hover :마우스 이벤트
+    :active : 마우스가 클릭 하거나 해당 요소가 활성화 되어 있을때 
+    :focus : 키보드 이벤트(버튼/입력/기능 태그에만 적용)
+
+    특정 위치의 선택자를 찾는 선택자
+    nth-child(n)=숫자는 순번을 의미, 숫자뒤에 n이 붙으면 숫자의 배수
+    odd = 홀수
+    even = 짝수
+    */
+    a{
+        color: black;
+    }
+    a:visited{
+        color: orange;
+    }
+    a:link{
+        color: red;
+    }
+    a:active{
+        background-color: coral;
+        color: gray;
+    }
+    a:focus{
+        background-color: purple;
+        color: red;
+    }
+    ul{
+        list-style: none;
+        padding: 24px;
+        background-color: coral;
+        width: 100%;
+    }
+    ul li{
+        width: 100%;
+        height: 50px;
+        margin-bottom: 20px;
+        background-color: pink;
+    }
+
+    ul li:last-child{
+        margin-bottom: 0px;
+    }
+    ul li:nth-child(odd){
+        background-color: orange;
+    }
+
+    div.list{
+        padding: 25px;
+        background: pink;
+        width: 100%;
+    }
+    div.list p:nth-child(6){
+        background: gray;
+    }
+    div.list p:nth-of-type(3){
+        background: rgb(124, 21, 21);
+    }
+    
+    </style>
+</head>
+<body>
+    <a href="www.235.co.kr" >방문하기</a><br>
+    <a href="http://www.naver.com">방문하기</a>
+    <p>text</p>
+    <button>button</button>
+    <input type="text">
+    <div>text</div>
+
+    <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+
+        <div class="list">
+            <p>dssdsd</p>
+            <span>sdsdsadad</span>
+            <div>adggfff</div>
+            <span>agfegegg</span>
+            <a href="#">safgfagbqafsafsa</a>
+            <p>dssdsd</p>
+            <p>dssdsd</p>
+            <span>agcscsfegegg</span>
+        </div>
+    </ul>
+</body>
+</html>

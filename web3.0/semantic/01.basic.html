@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱 태그</title>
+
+    <style>
+        /*
+        시맨틱 태그(목적에 맞는, 용도에 맞는 태그를 사용하여 구조를 잡는것)
+
+        시맨틱태그를 해야하는 이유
+        1. 검색엔진에 최적화(seo)
+        브라우저마다 가지고 있는 검색엔진이 태그의 목적에 부합하게 설계되어
+        있는 구조의 사이트에서 효율적으로 정보를 파악할 수 있기 때문에
+        사이트의 노츨이 유리해진다.
+
+        2. 웹 접근성의 효율이 증가
+        태그로 구분하기 때문에 컨텐츠 구분 명확.
+
+        3.관리에 용이
+        div,span으로만 작성하면 구별이 어려워서 보수가 힘들다.
+
+        header - nav - main - 
+        section(하나의 주제에 들어가는 컨텐츠를 묶는 태그) -
+        article(독립적으로 분리될 수 있는 컨텐츠 ex.게시판, 공지사항) 
+        aside(메인컨텐츠 외에 들어가는 영역 태그) - footer
+
+        */
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 class="logo">
+                <a href="#" title="홈으로 이동">
+                    logo
+                </a>
+            </h1>
+
+            <nav class="gnb">
+                <ul class="mainMenu">
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                    <li>menu</li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container">
+            <section class="content01">
+                <h2>content</h2>
+                <article>
+                    <h3>content01</h3>
+                </article>
+                <article>
+                    <h3>content02</h3>
+                </article>
+            </section>
+            <article>
+                <h2>content03</h2>
+            </article>
+        </main>
+
+        <footer>
+            footer
+        </footer>
+    </div>
+</body>
+</html>
