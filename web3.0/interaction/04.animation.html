@@ -11,44 +11,64 @@
             width: 50px;
             height: 50px;
             margin-bottom: 10px;
-            animation-name: boxAni;
+            animation: boxAni 1000ms, boxAni02 2000ms;
+            
+            /* 그룹속성 : name필 duration필 delay생 direction생 count생 timing-function생 
+            fill-mode,plat-state,timeline은 그룹에 포함하지 않음
+            */
+
+            /* animation-name: boxAni;
             animation-duration: 5000ms;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
+            animation-delay: 1s; */
+            /* animation-iteration-count: infinite;
+            animation-direction: alternate; */
 
             /* animation-name,animation-duration -필수 속성 
             animation-iteration-count = 반복
             무한반복 = infinite*/
         }
+        div.item:hover{
+            animation-play-state: running;
+        }
 
         .box01{
             background-color: coral;
+            animation-fill-mode: none;
+            animation-timing-function: ease;
         }
         .box02{
             background-color: pink;
+            animation-fill-mode: backwards;
+            animation-timing-function: ease-in;
         }
         .box03{
             background-color: purple;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
         }
         .box04{
             background-color: lime;
+            animation-fill-mode: both;
+            animation-timing-function: ease-in-out;
         }
         .box05{
             background-color: lightsalmon;
+            animation-timing-function: linear;
         }
         .box06{
             background-color: rgb(208, 189, 252);
         }
 
         @keyframes boxAni{
-  
 
-            50%{
-                background-color: red;
-                width: 200px;
-            }
+            
             100%{
                 background-color: yellow;
+            }
+        }
+
+        @keyframes boxAni02{
+            100%{
                 width: 100px;
             }
         }
