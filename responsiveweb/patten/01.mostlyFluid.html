@@ -84,6 +84,35 @@
             background-color: pink;
         }
 
+        section.section02{
+            padding: 12px;
+            background-color: gray;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        section.section02 div{
+            float: left;
+            height: 300px;
+        }
+
+        div.content03{
+            background-color: rgb(174, 197, 186);
+            width: 33.3%;
+        }
+
+        div.content04{
+            background-color: pink;
+            width: 33.3%;
+        }
+
+        div.content05{
+            background-color: skyblue;
+            width: 33.3%;
+        }
+
+
+
         @media screen and (max-width:1199px){
             div.wrapper{
                 width: 100%;
@@ -96,6 +125,29 @@
             }
             nav{
                 display: none;
+            }
+
+            div.content01,
+            div.content02{
+                width: 100%;
+            }
+            div.content01{
+                margin-right: 0px;
+            }
+
+            div.content03,
+            div.content04{
+                width: 50%;
+            }
+            div.content05{
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:479px){
+            div.content03,
+            div.content04{
+                width: 100%;
             }
         }
     </style>
