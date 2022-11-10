@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-grow</title>
+    <link rel="stylesheet" href="reset.css">
+
+    <style>
+
+        /* 
+        flex-grow : 아이템들의 영역 배분 속성
+        숫자다 클수록 많은 영역을 가져가게 되며 
+        컨텐츠 영역을 제외한 모든 아이템에 적용된 grow의
+        숫자만큼 배율을 나눠서 영역값으로 가져간다. 
+
+        아이템의 크기가 px, 0일경우 적용x        
+        */
+
+        div.container{
+            display: flex;
+        }
+        /* div.item{
+            flex-grow: 1;
+        } */
+
+        div.item:nth-of-type(1){
+            flex-grow: 2;
+        }
+        div.item:nth-of-type(2){
+            flex-grow: 1;
+        }
+        div.item:nth-of-type(3){
+            flex-grow: 1;
+        }
+        div.item:nth-of-type(4){
+            flex-grow: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">zzzzzz</div>
+        <div class="item">zzzzfsgdfzz</div>
+        <div class="item">zffffffffffffffffffffffffffffffffffffzz</div>
+        <div class="item">zggggadadadzz</div>
+    </div>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate tenetur, nostrum vel minima rem, dolorum aliquid voluptatem sit placeat inventore vitae porro officiis! Inventore, culpa quaerat nostrum quis ullam corrupti?
+</body>
+</html>

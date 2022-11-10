@@ -1,0 +1,9 @@
+div.container{
+    background-color: lightgray;
+}
+
+.item{
+    padding: 12px;
+    background-color: aquamarine;
+    border: solid 2px gray
+}
